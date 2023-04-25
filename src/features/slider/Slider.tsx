@@ -1,4 +1,5 @@
-export default function Slider() {
+import SliderProps from "./SliderProps";
+export default function Slider(props: SliderProps) {
     const img1 = 'https://www.sinfonia.is/media/hljodfaeraleikarar/c870x510/ptvrxqdh.jpg';
     return (
         <>
@@ -6,13 +7,20 @@ export default function Slider() {
             <div className="container">
               <div className='d-sm-flex align-items-center justify-content-between'>
                 <div>
-                  <h1>Become a <span className="text-warning">Web Developer</span></h1>
+                  <h1>
+                    {props.titlePartOne}
+                    <span className="text-warning">
+                      {props.titlePartTwo}  
+                    </span>
+                  </h1>
                   <p className='lead my-4'>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis fugit nulla eos, cumque aut quaerat?
+                    {props.description}
                   </p>
-                  <button className="btn btn-primary btn-lg" data-bs-toggle='modal' data-bs-target='#enroll'>Start The Enrollment</button>
+                  <button className="btn btn-primary btn-lg" data-bs-toggle='modal' data-bs-target='#enroll'>
+                    {props.buttonText}
+                  </button>
                 </div>
-                <img className='img-fluid w-50 d-none d-sm-block' src={img1} alt="" />
+                <img className='img-fluid w-50 d-none d-sm-block' src={props.imageUrl} alt="" />
               </div>
             </div>
         </section>

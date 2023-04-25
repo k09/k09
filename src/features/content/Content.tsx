@@ -1,44 +1,28 @@
+import ContentProps, { ImagePosition } from './ContentProps';
 import {ChevronRight} from 'react-bootstrap-icons';
 
-export default function Content() {
-    const img2 = 'https://www.sinfonia.is/media/hljodfaeraleikarar-2/c870x510/Gudmundur_Hafsteinsson_SINFO.jpg';
-    const img3 = 'https://www.sinfonia.is/media/hljodfaeraleikarar-2/c870x510/Nimrod_Ron_SINFO.jpg';
+export default function Content(props: ContentProps) {
+    const firstColumnOrder = props.imagePosition === ImagePosition.RIGHT ? 0 : 1;
+    const secondColumnOrder = firstColumnOrder === 0 ? 1 : 0;
+    const firstColumnClassName = `col-md order-${firstColumnOrder}`;
+    const secondColumnClassName = `col-md p-5 order-${secondColumnOrder}`;
     return (
       <>
-      <section id='learn' className="p-5">
-        <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-md">
-              <img src={img2} alt="" className='img-fluid' />
-            </div>
-            <div className="col-md p-5">
-              <h2>Learn The Fundamentals</h2>
-              <p className="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, aliquid facilis modi temporibus officiis maxime?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem impedit eos accusamus aperiam velit nulla sequi optio a totam ipsa voluptatum harum assumenda, dolorum enim modi quae nam consequuntur?</p>
-              <a href="#" className="btn btn-light-mt-3"><ChevronRight/> Read More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id='react' className="p-5 bg-dark text-light">
-        <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-md p-5">
-              <h2>Learn React</h2>
-              <p className="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, aliquid facilis modi temporibus officiis maxime?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia exercitationem impedit eos accusamus aperiam velit nulla sequi optio a totam ipsa voluptatum harum assumenda, dolorum enim modi quae nam consequuntur?</p>
-              <a href="#" className="btn btn-light-mt-3"><ChevronRight/> Read More</a>
-            </div>
-            <div className="col-md">
-              <img src={img3} alt="" className='img-fluid' />
+        <section id='learn' className="p-5">
+          <div className="container">
+            <div className="row align-items-center justify-content-between">
+              <div className={firstColumnClassName}>
+                <img src={props.imageUrl} alt="" className='img-fluid' />
+              </div>
+              <div className={secondColumnClassName}>
+                <h2>{props.title}</h2>
+                <p className="lead">{props.subtitle}</p>
+                <p>{props.description}</p>
+                <a href="#" className="btn btn-light-mt-3"><ChevronRight/> {props.more}</a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-
-
+        </section>
       </>
     );
 }

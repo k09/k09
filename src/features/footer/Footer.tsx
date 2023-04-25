@@ -1,6 +1,7 @@
+import FooterProps from './FooterProps';
 import {ArrowUpCircle} from 'react-bootstrap-icons';
 
-export default function Footer() {
+export default function Footer(props: FooterProps) {
     return (
       <>
         <footer className="p-5 bg-dark text-white text-center position-relative">
