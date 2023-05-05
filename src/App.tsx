@@ -2,6 +2,7 @@ import './App.css'
 import Navigation from './features/navigation/Navigation';
 import Slider from './features/slider/Slider';
 import Newsletter from './features/newsletter/Newsletter';
+import Test from './features/test/Test';
 import Cards from './features/card/Cards';
 import Content from './features/content/Content';
 import Questions from './features/question/Questions';
@@ -9,6 +10,7 @@ import Instructors from './features/instructor/Instructors';
 import Contact from './features/contact/Contact';
 import Footer from './features/footer/Footer';
 import { ImagePosition } from './features/content/ContentProps';
+
 
 export default function App() {
   
@@ -21,6 +23,9 @@ export default function App() {
         titlePartTwo='Web Developer'
         description='æalkdjf lkajd flkj aldkfj lakjd f'
         buttonText='Start Enrollment'
+      />
+      <Test 
+        title='Prufa......'
       />
       <Newsletter
         title='Sign up for our newsletter'
