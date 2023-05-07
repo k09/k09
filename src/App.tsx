@@ -17,15 +17,15 @@ export default function App() {
   return (
     <>
       <Navigation />
+      <Test 
+        title='Prufa......'
+      />
       <Slider 
         imageUrl='https://cdn.pixabay.com/photo/2019/08/03/01/58/wstezyk-huntsman-4380924_960_720.jpg'
         titlePartOne='Become a'
         titlePartTwo='Web Developer'
         description='æalkdjf lkajd flkj aldkfj lakjd f'
         buttonText='Start Enrollment'
-      />
-      <Test 
-        title='Prufa......'
       />
       <Newsletter
         title='Sign up for our newsletter'

@@ -1,9 +1,15 @@
 {
     "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+      { "id": 1, "title": "json-server", "author": "typicode" },
+      { "id": 2, "title": "react", "author": "k09" },
+      { "id": 3, "title": "redux", "author": "k09" },
+      { "id": 4, "title": "redux toolkit", "author": "k09" },
+      { "id": 5, "title": "redux toolkit query", "author": "k09" }
+
     ],
     "comments": [
       { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some other comment", "postId": 1 }
+      { "id": 2, "body": "some other comment", "postId": 1 },
+      { "id": 3, "body": "some more comment", "postId": 2 }
     ]
   }
