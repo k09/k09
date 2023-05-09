@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react';
 import './App.css'
 import Navigation from './features/navigation/Navigation';
 import Slider from './features/slider/Slider';
@@ -13,7 +14,7 @@ import { ImagePosition } from './features/content/ContentProps';
 
 
 export default function App() {
-  
+
   return (
     <>
       <Navigation />

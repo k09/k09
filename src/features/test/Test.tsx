@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { incrementTestStoreCounter, decrementTestStoreCounter, selectTestCounter } from './testCounterSlice';
 import { created, updated, deleted, rtkCountSelector, rtkPostsSelector } from './rtk/rtkPostSlice'
 
-export default function Test(props) {
+export default function Test(props: any) {
     /*
         Hooks
     */
